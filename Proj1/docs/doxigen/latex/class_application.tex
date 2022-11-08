@@ -1,0 +1,210 @@
+\hypertarget{class_application}{}\doxysection{Application Class Reference}
+\label{class_application}\index{Application@{Application}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+set$<$ \mbox{\hyperlink{class_uni_class}{Uni\+Class}} $\ast$ $>$ \mbox{\hyperlink{class_application_a43057a2be3d89121d377e80678a1b0cc}{read\+Uniclasses}} ()
+\item 
+set$<$ \mbox{\hyperlink{class_student}{Student}} $\ast$ $>$ \mbox{\hyperlink{class_application_a3b9d53d51e4f73e983b9a9615a4e2fee}{read\+Students}} ()
+\item 
+set$<$ \mbox{\hyperlink{structschedule}{schedule}} $>$ \mbox{\hyperlink{class_application_a226a07333fac1e16b31dae1a3901fa3a}{read\+Classes\+Per\+UC}} ()
+\item 
+set$<$ \mbox{\hyperlink{structstudent_and_class}{student\+And\+Class}} $>$ \mbox{\hyperlink{class_application_a2c2e610777849477c7973f6d1763da83}{Student\+Class}} ()
+\item 
+set$<$ \mbox{\hyperlink{structstudent_and_class}{student\+And\+Class}} $>$ \mbox{\hyperlink{class_application_ac939db4835019d23523ad37511f4ff7f}{Student\+Schedule}} (string student\+Code)
+\item 
+string \mbox{\hyperlink{class_application_a9661e72fd75082215133323db9157a8b}{Format\+Date}} (float hour)
+\item 
+set$<$ \mbox{\hyperlink{structschedule}{schedule}} $>$ \mbox{\hyperlink{class_application_a8f53867963236c8dedba28222a54722a}{Classes\+Schedule}} (string class\+Code)
+\item 
+\mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{struct_student_ucs}{Student\+Ucs}} $>$ \mbox{\hyperlink{class_application_a819ce38ea0b6a29e96cd04e0c385b9a4}{Student\+UC}} ()
+\item 
+\mbox{\hyperlink{class_b_s_t}{BST}}$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_application_a75e56879c033fd6acc74bdea58ef7423}{Student\+Numb\+Year}} (int ano)
+\item 
+\mbox{\hyperlink{class_b_s_t}{BST}}$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_application_a225c6097ecf86a9768d462332aa043e6}{Student\+Numb\+Uc}} (string uccode)
+\item 
+\mbox{\hyperlink{class_b_s_t}{BST}}$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_application_a0dffbcccf5b313b29c28aaa7ba97827a}{Student\+Class\+Uc}} (string uccode, string turma\+Final)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, string $>$ \mbox{\hyperlink{class_application_a56bb7997b101a72739294863f6e83d99}{Ucs\+Map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_application_a8f53867963236c8dedba28222a54722a}\label{class_application_a8f53867963236c8dedba28222a54722a}} 
+\index{Application@{Application}!ClassesSchedule@{ClassesSchedule}}
+\index{ClassesSchedule@{ClassesSchedule}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{ClassesSchedule()}{ClassesSchedule()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{structschedule}{schedule}} $>$ Application\+::\+Classes\+Schedule (\begin{DoxyParamCaption}\item[{string}]{class\+Code }\end{DoxyParamCaption})}
+
+Creates a set with all the lessons in a class, entered by the use. 
+\begin{DoxyParams}{Parameters}
+{\em class\+Code} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set$<$\+Uni\+Class$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a9661e72fd75082215133323db9157a8b}\label{class_application_a9661e72fd75082215133323db9157a8b}} 
+\index{Application@{Application}!FormatDate@{FormatDate}}
+\index{FormatDate@{FormatDate}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{FormatDate()}{FormatDate()}}
+{\footnotesize\ttfamily string Application\+::\+Format\+Date (\begin{DoxyParamCaption}\item[{float}]{hour }\end{DoxyParamCaption})}
+
+Puts the time in the correct format (hh\+:mm). 
+\begin{DoxyParams}{Parameters}
+{\em hour} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hour\+Start 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a226a07333fac1e16b31dae1a3901fa3a}\label{class_application_a226a07333fac1e16b31dae1a3901fa3a}} 
+\index{Application@{Application}!readClassesPerUC@{readClassesPerUC}}
+\index{readClassesPerUC@{readClassesPerUC}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{readClassesPerUC()}{readClassesPerUC()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{structschedule}{schedule}} $>$ Application\+::read\+Classes\+Per\+UC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the file classes\+\_\+per\+\_\+uc.\+csv and stores it in a set, using the schedule struct. \begin{DoxyReturn}{Returns}
+set$<$\+Uni\+Class$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a3b9d53d51e4f73e983b9a9615a4e2fee}\label{class_application_a3b9d53d51e4f73e983b9a9615a4e2fee}} 
+\index{Application@{Application}!readStudents@{readStudents}}
+\index{readStudents@{readStudents}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{readStudents()}{readStudents()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{class_student}{Student}} $\ast$ $>$ Application\+::read\+Students (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the file students\+\_\+classes.\+csv and stores it in a set, using the \mbox{\hyperlink{class_student}{Student}} constructor. \begin{DoxyReturn}{Returns}
+set$<$\+Uni\+Class$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a43057a2be3d89121d377e80678a1b0cc}\label{class_application_a43057a2be3d89121d377e80678a1b0cc}} 
+\index{Application@{Application}!readUniclasses@{readUniclasses}}
+\index{readUniclasses@{readUniclasses}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{readUniclasses()}{readUniclasses()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{class_uni_class}{Uni\+Class}} $\ast$ $>$ Application\+::read\+Uniclasses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the file classes.\+csv and stores it in a set, using the \mbox{\hyperlink{class_uni_class}{Uni\+Class}} constructor. \begin{DoxyReturn}{Returns}
+set$<$\+Uni\+Class$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a2c2e610777849477c7973f6d1763da83}\label{class_application_a2c2e610777849477c7973f6d1763da83}} 
+\index{Application@{Application}!StudentClass@{StudentClass}}
+\index{StudentClass@{StudentClass}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StudentClass()}{StudentClass()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{structstudent_and_class}{student\+And\+Class}} $>$ Application\+::\+Student\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Joins the sets from the functions read\+Uniclasses and read\+Students into a single set, to join all the information about schedules and students. \begin{DoxyReturn}{Returns}
+set$<$student\+And\+Class$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a0dffbcccf5b313b29c28aaa7ba97827a}\label{class_application_a0dffbcccf5b313b29c28aaa7ba97827a}} 
+\index{Application@{Application}!StudentClassUc@{StudentClassUc}}
+\index{StudentClassUc@{StudentClassUc}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StudentClassUc()}{StudentClassUc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_s_t}{BST}}$<$ pair$<$ string, string $>$ $>$ Application\+::\+Student\+Class\+Uc (\begin{DoxyParamCaption}\item[{string}]{uccode,  }\item[{string}]{turma\+Final }\end{DoxyParamCaption})}
+
+Creates a bst with all students enrolled in a specific Uc in a specific class. 
+\begin{DoxyParams}{Parameters}
+{\em uccode} & \\
+\hline
+{\em turma\+Final} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set$<$\+Uni\+Class$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a225c6097ecf86a9768d462332aa043e6}\label{class_application_a225c6097ecf86a9768d462332aa043e6}} 
+\index{Application@{Application}!StudentNumbUc@{StudentNumbUc}}
+\index{StudentNumbUc@{StudentNumbUc}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StudentNumbUc()}{StudentNumbUc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_s_t}{BST}}$<$ pair$<$ string, string $>$ $>$ Application\+::\+Student\+Numb\+Uc (\begin{DoxyParamCaption}\item[{string}]{uccode }\end{DoxyParamCaption})}
+
+Creates a bst with all students enrolled in a given Uc. 
+\begin{DoxyParams}{Parameters}
+{\em uccode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+BST$<$pair$<$string, string$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a75e56879c033fd6acc74bdea58ef7423}\label{class_application_a75e56879c033fd6acc74bdea58ef7423}} 
+\index{Application@{Application}!StudentNumbYear@{StudentNumbYear}}
+\index{StudentNumbYear@{StudentNumbYear}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StudentNumbYear()}{StudentNumbYear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_s_t}{BST}}$<$ pair$<$ string, string $>$ $>$ Application\+::\+Student\+Numb\+Year (\begin{DoxyParamCaption}\item[{int}]{ano }\end{DoxyParamCaption})}
+
+Creates a bst with all students of a certain year (1, 2 or 3). 
+\begin{DoxyParams}{Parameters}
+{\em ano} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+BST$<$pair$<$string, string$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_ac939db4835019d23523ad37511f4ff7f}\label{class_application_ac939db4835019d23523ad37511f4ff7f}} 
+\index{Application@{Application}!StudentSchedule@{StudentSchedule}}
+\index{StudentSchedule@{StudentSchedule}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StudentSchedule()}{StudentSchedule()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{structstudent_and_class}{student\+And\+Class}} $>$ Application\+::\+Student\+Schedule (\begin{DoxyParamCaption}\item[{string}]{student\+Code }\end{DoxyParamCaption})}
+
+Goes through the set of the function Student\+Class and adds to a new set (without duplicates) the student\textquotesingle{}s classes that the user entered. 
+\begin{DoxyParams}{Parameters}
+{\em student\+Code} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set$<$\+Uni\+Class$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_application_a819ce38ea0b6a29e96cd04e0c385b9a4}\label{class_application_a819ce38ea0b6a29e96cd04e0c385b9a4}} 
+\index{Application@{Application}!StudentUC@{StudentUC}}
+\index{StudentUC@{StudentUC}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{StudentUC()}{StudentUC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{struct_student_ucs}{Student\+Ucs}} $>$ Application\+::\+Student\+UC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a bst with all students and their number of Ucs \begin{DoxyReturn}{Returns}
+BST$<$\+Student\+Ucs$>$ 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_application_a56bb7997b101a72739294863f6e83d99}\label{class_application_a56bb7997b101a72739294863f6e83d99}} 
+\index{Application@{Application}!UcsMap@{UcsMap}}
+\index{UcsMap@{UcsMap}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{UcsMap}{UcsMap}}
+{\footnotesize\ttfamily map$<$string, string$>$ Application\+::\+Ucs\+Map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\{\textcolor{stringliteral}{"{}L.EIC001"{}}, \textcolor{stringliteral}{"{}ALGA"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC002"{}}, \textcolor{stringliteral}{"{}AM I"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC003"{}}, \textcolor{stringliteral}{"{}FP"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC004"{}}, \textcolor{stringliteral}{"{}FSC"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC005"{}}, \textcolor{stringliteral}{"{}MD"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC006"{}}, \textcolor{stringliteral}{"{}AC"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC007"{}}, \textcolor{stringliteral}{"{}AM II"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC008"{}}, \textcolor{stringliteral}{"{}F I"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC009"{}}, \textcolor{stringliteral}{"{}P"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC010"{}}, \textcolor{stringliteral}{"{}TC"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC011"{}}, \textcolor{stringliteral}{"{}AED"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC012"{}}, \textcolor{stringliteral}{"{}BD"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC013"{}}, \textcolor{stringliteral}{"{}F II"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC014"{}}, \textcolor{stringliteral}{"{}LDTS"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC015"{}}, \textcolor{stringliteral}{"{}SO"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC016"{}}, \textcolor{stringliteral}{"{}DA"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC017"{}}, \textcolor{stringliteral}{"{}ES"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC018"{}}, \textcolor{stringliteral}{"{}LC"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC019"{}}, \textcolor{stringliteral}{"{}LTW"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC020"{}}, \textcolor{stringliteral}{"{}ME"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC021"{}}, \textcolor{stringliteral}{"{}FSI"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC022"{}}, \textcolor{stringliteral}{"{}IPC"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC023"{}}, \textcolor{stringliteral}{"{}LBAW"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC024"{}}, \textcolor{stringliteral}{"{}PFL"{}}\},}
+\DoxyCodeLine{                                  \{\textcolor{stringliteral}{"{}L.EIC025"{}}, \textcolor{stringliteral}{"{}RC"{}}\}\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application.\+h\item 
+Application.\+cpp\end{DoxyCompactItemize}
